@@ -1,6 +1,7 @@
 package com.androiddesdecero.cursodagger2componentandsubcomponent.di;
 
 import com.androiddesdecero.cursodagger2componentandsubcomponent.ui.Main2Activity;
+import com.androiddesdecero.cursodagger2componentandsubcomponent.ui.MainActivity;
 
 import dagger.Component;
 
@@ -12,4 +13,5 @@ import dagger.Component;
 public interface MotorComponent {
 
     void inject(Main2Activity main2Activity);
+
 }
