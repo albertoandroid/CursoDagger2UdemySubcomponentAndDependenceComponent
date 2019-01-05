@@ -20,4 +20,6 @@ public interface MotorComponent {
 
     void inject(Main2Activity main2Activity);
 
+    CocheSubComponent plusCocheSubComponent(CocheModule cocheModule);
+
 }
