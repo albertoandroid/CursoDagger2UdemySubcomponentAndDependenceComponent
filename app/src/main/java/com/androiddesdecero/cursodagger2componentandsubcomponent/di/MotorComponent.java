@@ -4,6 +4,8 @@ import com.androiddesdecero.cursodagger2componentandsubcomponent.Motor;
 import com.androiddesdecero.cursodagger2componentandsubcomponent.ui.Main2Activity;
 import com.androiddesdecero.cursodagger2componentandsubcomponent.ui.MainActivity;
 
+import javax.inject.Named;
+
 import dagger.Component;
 
 /**
@@ -14,6 +16,7 @@ import dagger.Component;
 public interface MotorComponent {
 
     Motor motor();
+    @Named("electrico") Motor motorElectrico();
 
     void inject(Main2Activity main2Activity);
 

@@ -13,6 +13,7 @@ import com.androiddesdecero.cursodagger2componentandsubcomponent.R;
 import com.androiddesdecero.cursodagger2componentandsubcomponent.di.BaseApplication;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Inject
     Coche cocheDiesel;
+
+    @Named("coche_electrico")
+    @Inject
+    Coche cocheElectrico;
 
 
 
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setUpView();
 
         Log.d("TAG1", cocheDiesel.getCoche());
+        Log.d("TAG1", cocheElectrico.getCoche());
     }
 
     private void setUpView(){
