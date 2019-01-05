@@ -10,12 +10,19 @@ public class BaseApplication extends Application {
 
     private MotorComponent motorComponent;
 
+    private CocheComponent cocheComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
 
         motorComponent = DaggerMotorComponent
                 .builder()
+                .build();
+
+        cocheComponent = DaggerCocheComponent
+                .builder()
+                .motorComponent(getMotorComponent())
                 .build();
     }
 
