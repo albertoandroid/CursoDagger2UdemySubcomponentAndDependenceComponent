@@ -12,6 +12,8 @@ public class BaseApplication extends Application {
 
     private CocheComponent cocheComponent;
 
+    private CocheSubComponent cocheSubComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -24,6 +26,13 @@ public class BaseApplication extends Application {
                 .builder()
                 .motorComponent(getMotorComponent())
                 .build();
+    }
+
+    public CocheSubComponent plusCocheSubComponent(){
+        if(cocheSubComponent == null){
+            cocheSubComponent = motorComponent.plusCocheSubComponent(new CocheModule());
+        }
+        return cocheSubComponent;
     }
 
     public MotorComponent getMotorComponent(){
