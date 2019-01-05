@@ -29,4 +29,8 @@ public class BaseApplication extends Application {
     public MotorComponent getMotorComponent(){
         return motorComponent;
     }
+
+    public CocheComponent getCocheComponent(){
+        return cocheComponent;
+    }
 }
