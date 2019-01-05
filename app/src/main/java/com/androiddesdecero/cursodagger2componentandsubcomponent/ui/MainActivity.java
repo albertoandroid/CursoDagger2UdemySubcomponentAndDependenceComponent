@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     Coche cocheElectrico;
 
+    @Named("coche_gasolina")
+    @Inject
+    Coche cocheGasolina;
+
 
 
     @Override
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("TAG1", cocheDiesel.getCoche());
         Log.d("TAG1", cocheElectrico.getCoche());
+
+        Log.d("TAG1", cocheGasolina.getCoche());
     }
 
     private void setUpView(){
